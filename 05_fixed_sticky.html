@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+
+      /*
+      Difference 1
+       fixed: width should specified otherwise it will have the size the same content fit
+       sticky: by default taking full width of the parent element
+
+      Difference 2
+       fixed: is referencing the viewport
+       sticky: is referencing the parent
+      */
+      .legend {
+        background-color: red;
+        position: fixed;
+        bottom: 12px;
+        left: 12px;
+        /* width: 100%; */
+      }
+
+      * {
+        margin: 0;
+      }
+
+      .header {
+        background-color: blue;
+        position: sticky;
+        top: 0;
+        color: white;
+        text-transform: uppercase;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>logo</h1>
+
+        <nav>
+          <ul></ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+          veniam et ipsam saepe architecto, similique consequuntur perferendis
+          dolorem ducimus quasi inventore qui quo tempore libero incidunt ad
+          aliquid, reprehenderit iure.
+        </p>
+        <div class="legend">Legend</div>
+      </div>
+    </main>
+  </body>
+</html>
